@@ -1,0 +1,2 @@
+Hello s3kit demo!
+This is a small text file.

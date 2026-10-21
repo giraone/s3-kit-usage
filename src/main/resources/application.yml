@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: s3kit-demo
+  servlet:
+    multipart:
+      # Large files are spooled to temporary files on disk above the threshold, never held completely in memory
+      max-file-size: -1
+      max-request-size: -1
+      file-size-threshold: 1MB
+
+s3-properties:
+  endpoint: ${S3_ENDPOINT:http://localhost:9000}
+  region: default
+  access-key: ${S3_ACCESS_KEY:minioadmin}
+  secret-key: ${S3_SECRET_KEY:minioadmin}
+
+demo:
+  process-alias: demo
+  bucket-count: 10
